@@ -1,6 +1,7 @@
 package demo.controller;
 
 import demo.dto.Temperature;
+import demo.dto.TemperatureWeek;
 import demo.service.DataService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,12 @@ public class DataController {
     public List<Temperature> getTemperatureDevice(@PathVariable("deviceid") String deviceid) {
         log.debug("/temperature/"+deviceid);
         return dataService.getTemperatureByDeviceId(deviceid);
+    }
+
+    @RequestMapping(value = "/temperature/{deviceid}/byweek", method = GET)
+    public List<TemperatureWeek> getTemperatureByWeekDevice(@PathVariable("deviceid") String deviceid) {
+        log.debug("/temperature/"+deviceid);
+        return dataService.getAverageTemperatureByWeekByDeviceId(deviceid);
     }
 
     @RequestMapping(value = "/temperature/{deviceid}/fake", method = GET)

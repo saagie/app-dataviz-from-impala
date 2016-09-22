@@ -20,5 +20,10 @@ public class DataService {
         return myBatisMapper.select(Integer.parseInt(deviceid));
     }
 
+    public List<TemperatureWeek> getAverageTemperatureByWeekByDeviceId(String deviceid) {
+
+        return myBatisMapper.selectbyweek(Integer.parseInt(deviceid));
+    }
+
 
 }

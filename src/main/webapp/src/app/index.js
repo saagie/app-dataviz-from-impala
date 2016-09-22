@@ -42,7 +42,7 @@ app.controller("main",['$scope','$http', function ($scope,$http)
   $scope.load= function(request) {
     var body={};
     body.request=request;
-    $http.get('/api/v1/temperature/5982',body)
+    $http.get('/api/v1/temperature/5982/byweek',body)
       .success(function (data) {
         $scope.dataFieldName=[];
         $scope.data=eval(data);
