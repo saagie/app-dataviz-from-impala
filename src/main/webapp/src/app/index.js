@@ -6,11 +6,11 @@ app.controller("main",['$scope','$http', function ($scope,$http)
 {
 
   $scope.data=[
-    { "label" : "A" , "value" : 29.765957771107 },
-    { "label" : "B" , "value" : 2 },
-    { "label" : "C" , "value" : 32.807804682612 },
-    { "label" : "D" , "value" : 196.45946739256 },
-    { "label" : "E" , "value" : 0.19434030906893 }
+    { "label" : "A" , "value" : 0 },
+    { "label" : "B" , "value" : 0 },
+    { "label" : "C" , "value" : 0 },
+    { "label" : "D" , "value" : 0 },
+    { "label" : "E" , "value" : 0 }
   ];
 
   $scope.dataFieldName=fillFieldName($scope.data);
